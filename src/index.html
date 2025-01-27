@@ -123,7 +123,7 @@
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--resume"
-                  href="assets/resume.pdf"
+                  href="../my_personal_Info/Resume_Vishnu_.pdf"
                 >
                   View Resume
                 </a>
@@ -134,7 +134,101 @@
       </div>
     </section>
     <!-- /END About Section -->
-
+    <section id="skills" style="max-width: 800px; margin: 100 auto; padding: 2rem; font-family: Arial, sans-serif; background-color:white; color: #333; overflow: hidden;">
+      <h2 style="text-align: center; color: #0077ff; border-bottom: 3px solid #0077ff; display: inline-block; padding-bottom: 0.5rem; margin-bottom: 2rem;">
+        Skills
+      </h2>
+      <p style="text-align: center; margin-bottom: 2rem;">
+        My level of proficiency in my tech stack is as below...
+      </p>
+    
+      <div class="skill" style="margin-bottom: 1.5rem;">
+        <span style="display: block; font-weight: bold; margin-bottom: 0.5rem;">HTML5</span>
+        <div style="background-color: #e0e0e0; border-radius: 20px; overflow: hidden; height: 20px;">
+          <div class="progress" style="background-color: #0077ff; height: 100%; color: white; text-align: right; padding-right: 0.5rem; font-size: 0.9rem; font-weight: bold; line-height: 20px; border-radius: 20px 0 0 20px; width: 0; transition: width 2s ease-in-out;">
+            95%
+          </div>
+        </div>
+      </div>
+    
+      <div class="skill" style="margin-bottom: 1.5rem;">
+        <span style="display: block; font-weight: bold; margin-bottom: 0.5rem;">CSS</span>
+        <div style="background-color: #e0e0e0; border-radius: 20px; overflow: hidden; height: 20px;">
+          <div class="progress" style="background-color: #0077ff; height: 100%; color: white; text-align: right; padding-right: 0.5rem; font-size: 0.9rem; font-weight: bold; line-height: 20px; border-radius: 20px 0 0 20px; width: 0; transition: width 2s ease-in-out;">
+            85%
+          </div>
+        </div>
+      </div>
+    
+      <div class="skill" style="margin-bottom: 1.5rem;">
+        <span style="display: block; font-weight: bold; margin-bottom: 0.5rem;">JavaScript</span>
+        <div style="background-color: #e0e0e0; border-radius: 20px; overflow: hidden; height: 20px;">
+          <div class="progress" style="background-color: #0077ff; height: 100%; color: white; text-align: right; padding-right: 0.5rem; font-size: 0.9rem; font-weight: bold; line-height: 20px; border-radius: 20px 0 0 20px; width: 0; transition: width 2s ease-in-out;">
+            60%
+          </div>
+        </div>
+      </div>
+      <div class="skill" style="margin-bottom: 1.5rem;">
+        <span style="display: block; font-weight: bold; margin-bottom: 0.5rem;">SQL</span>
+        <div style="background-color: #e0e0e0; border-radius: 20px; overflow: hidden; height: 20px;">
+          <div class="progress" style="background-color: #0077ff; height: 100%; color: white; text-align: right; padding-right: 0.5rem; font-size: 0.9rem; font-weight: bold; line-height: 20px; border-radius: 20px 0 0 20px; width: 0; transition: width 2s ease-in-out;">
+            60%
+          </div>
+        </div>
+      </div>
+      <div class="skill" style="margin-bottom: 1.5rem;">
+        <span style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Spring Boot</span>
+        <div style="background-color: #e0e0e0; border-radius: 20px; overflow: hidden; height: 20px;">
+          <div class="progress" style="background-color: #0077ff; height: 100%; color: white; text-align: right; padding-right: 0.5rem; font-size: 0.9rem; font-weight: bold; line-height: 20px; border-radius: 20px 0 0 20px; width: 0; transition: width 2s ease-in-out;">
+            20%
+          </div>
+        </div>
+      </div>
+      <div class="skill" style="margin-bottom: 1.5rem;">
+        <span style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Java</span>
+        <div style="background-color: #e0e0e0; border-radius: 20px; overflow: hidden; height: 20px;">
+          <div class="progress" style="background-color: #0077ff; height: 100%; color: white; text-align: right; padding-right: 0.5rem; font-size: 0.9rem; font-weight: bold; line-height: 20px; border-radius: 20px 0 0 20px; width: 0; transition: width 2s ease-in-out;">
+            80%
+          </div>
+        </div>
+      </div>
+    
+      <div class="skill" style="margin-bottom: 1.5rem;">
+        <span style="display: block; font-weight: bold; margin-bottom: 0.5rem;">React</span>
+        <div style="background-color: #e0e0e0; border-radius: 20px; overflow: hidden; height: 20px;">
+          <div class="progress" style="background-color: #0077ff; height: 100%; color: white; text-align: right; padding-right: 0.5rem; font-size: 0.9rem; font-weight: bold; line-height: 20px; border-radius: 20px 0 0 20px; width: 0; transition: width 2s ease-in-out;">
+            70%
+          </div>
+        </div>
+      </div>
+      
+     
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const progressBars = document.querySelectorAll(".progress");
+    
+          const observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  const progress = entry.target;
+                  const percentage = progress.textContent.trim();
+                  progress.style.width = percentage; // Set width to percentage
+                  observer.unobserve(progress); // Stop observing after animation
+                }
+              });
+            },
+            { threshold: 0.5 } // Trigger animation when the element is 50% visible
+          );
+    
+          progressBars.forEach(function (bar) {
+            observer.observe(bar);
+          });
+        });
+      </script>
+    </section>
+    
     <!-- **** Projects Section **** -->
     <section id="projects">
       <div class="container">
@@ -152,9 +246,9 @@
                 <h3 class="project-wrapper__text-title">Food Villa</h3>
                 <div>
                   <p class="mb-4">
-                    About Food Villa App Food Villa is a user-friendly food delivery and
-                     restaurant discovery app. Browse menus, order meals, and explore restaurants 
-                     effortlessly. With real-time tracking, secure payments, and personalized recommendations,
+                    Food Villa App Food Villa is a user-friendly food delivery and
+                     restaurant website. Browse menus, order meals, and explore restaurants 
+                     effortlessly. With real-time data from Swiggy API,
                      Food Villa ensures convenience and satisfaction, making it your go-to choice for culinary delights.
                   </p>
                 </div>
@@ -313,8 +407,8 @@
             rel="noreferrer"
             target="_blank"
             class="cta-btn cta-btn--resume"
-            href="mailto:example@email.com"
-            >Call to Action</a
+            href="mailto:ummadivishnuvardhan46@gmail.com"
+            >Send a message</a
           >
         </div>
       </div>
@@ -332,9 +426,10 @@
             <img
               src="../my_personal_Info/landline-phone-hand-drawn_78370-6597.avif"
               alt="Phone Call"
-              style="width: 40px; height: 40px;"
+              style="width: 40px; height: 40px; border-radius: 50%;"
             />
           </a>
+          
           
           
           <a rel="noreferrer" href="https://www.linkedin.com/in/ummadi-vishnuvardhan-a50b88221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
